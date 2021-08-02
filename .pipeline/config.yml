@@ -1,0 +1,10 @@
+general:
+host: 'hcluks4hana.hcldigilabs.com'
+abapCredentialsId: 'AbapSystem'
+stages:
+  Clone Repositories:
+    repositories: 'repositories.yml'
+    strategy: 'Clone'
+    
+    ATC:
+    atcConfig: 'atcConfig.yml'

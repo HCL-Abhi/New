@@ -1,4 +1,4 @@
-@Library('piper-library-os') _
+
 
 
 gctsDeploy script: this
@@ -7,7 +7,7 @@ host: 'https://hclutl1909.hcldigilabs.com:8001',
   abapCredentialsId: 'ABAPUserPasswordCredentialsId',
   repository: 'HCL-Githup',
   remoteRepositoryURL: "https://github.com/abhilashhaa/HCL_Githup",
-  role: 'Provided',
+  role: 'TARGET',
   vSID: 'FEF',
   branch: 'master',
   commit: 'commit',

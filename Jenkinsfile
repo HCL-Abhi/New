@@ -1,3 +1,4 @@
-@Library('piper-library-os') _
+@Library('piper-lib-os') _
 
-abapEnvironmentPipeline script: this
+
+gctsDeploy script: this

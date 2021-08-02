@@ -1,0 +1,3 @@
+repositories:
+- name: '/HCL-Githup'
+  branch: 'master'

@@ -1,3 +1,3 @@
-@Library('piper-lib-os') _
+@Library('piper-library-os') _
 
 abapEnvironmentPipeline script: this

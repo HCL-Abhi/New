@@ -2,7 +2,11 @@
 
 node() {
   
-  stage('Deploy') {
+  stage('start')
+  {
+  }
+  
+  stage('DeployCommit') {
     gctsDeploy(
         script: this,
         host: 'https://abap.server.com:port',
@@ -11,4 +15,14 @@ node() {
         repository: 'myrepo',
       )
   }
+  
+  stage('RunUnitTest') {
+    gctsExecuteABAPUnitTests(
+      script: this
+    )
+    
+    stage('RollbackCommit') {
+    gctsRollback(
+      script: this
+    )
 }

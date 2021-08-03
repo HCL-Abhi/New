@@ -19,7 +19,7 @@ node ()
     rollback: false
     configuration:
         dummyconfig: "dummyval"
-  
+)  
   
   stage('RunUnitTest') 
     gctsExecuteABAPUnitTests(

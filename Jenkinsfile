@@ -4,7 +4,7 @@ node ()
    {
   
   
-  stage('DeployCommit') {
+  stage('DeployCommit') 
     gctsDeploy(
         script: this,
         host: 'https://abap.server.com:port',
@@ -12,17 +12,17 @@ node ()
         abapCredentialsId: 'ABAPUserPasswordCredentialsId',
         repository: 'myrepo',
       )
-  }
   
-  stage('RunUnitTest') {
+  
+  stage('RunUnitTest') 
     gctsExecuteABAPUnitTests(
       script: this
     )
-  }
-    stage('RollbackCommit') {
+  
+    stage('RollbackCommit') 
     gctsRollback(
       script: this
     )
-}
+
 }
 

@@ -1,24 +1,24 @@
 @Library('piper-library-os')_ 
 
 node () 
-   {
+{
   
-  
-  stage('DeployCommit') 
+    stage('DeployCommit') 
     gctsDeploy(
-       script: this,
-       host: 'https://hclutl1909.hcldigilabs.com:8001'
-       abapCredentialsId: 'ABAPUserPasswordCredentialsId'
-       repository: 'OpenSAP'
-       remoteRepositoryURL: 'https://github.com/abhilashhaa/OpenSAPDemo.git'
-       role: 'Provided'
-       vSID: 'FEF'
-       branch: 'master'
-       commit: 'commit'
-       scope: 'scope'
-       rollback: false
-       configuration:
-       dummyconfig: "dummyval"
+  script: this,
+  host: 'https://abap.server.com:port',
+  client: '000',
+  abapCredentialsId: 'ABAPUserPasswordCredentialsId',
+  repository: 'myrepo',
+  remoteRepositoryURL: "https://remote.repository.url.com",
+  role: 'SOURCE',
+  vSID: 'ABC',
+  branch: 'branch',
+  commit: 'commit',
+  scope: 'scope',
+  rollback: false,
+  configuration: [dummyConfig: 'dummyval']
+)
 )  
   
   stage('RunUnitTest') 

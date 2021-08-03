@@ -1,8 +1,8 @@
 @Library('piper-library-os') 
 
 node () 
-  pipeline {
-    agent any
+   {
+  
   
   stage('DeployCommit') {
     gctsDeploy(

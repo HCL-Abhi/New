@@ -1,4 +1,6 @@
+@library ('piper-library-os')
 
+commonPipelineEnvironment script: this
 
 node() {
 

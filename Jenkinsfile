@@ -2,6 +2,9 @@
 
 node() {
   
+  pipeline {
+    agent any
+  
   stage('DeployCommit') {
     gctsDeploy(
         script: this,
@@ -21,5 +24,6 @@ node() {
     gctsRollback(
       script: this
     )
+}
 }
 }

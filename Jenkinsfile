@@ -6,19 +6,19 @@ node ()
   
   stage('DeployCommit') 
     gctsDeploy(
-    host: 'https://hclutl1909.hcldigilabs.com:8001/'
-    client: '000'
-    abapCredentialsId: 'ABAPUserPasswordCredentialsId'
-    repository: 'OpenSAP'
-    remoteRepositoryURL: "https://github.com/abhilashhaa/OpenSAPDemo.git"
-    role: 'Provided'
-    vSID: 'FEF'
-    branch: 'master'
-    commit: 'commit'
-    scope: 'scope'
-    rollback: false
-    configuration:
-        dummyconfig: "dummyval"
+      host: 'https://hclutl1909.hcldigilabs.com:8001'
+      client:'000',
+      abapCredentialsId: 'ABAPUserPasswordCredentialsId'
+      repository: 'OpenSAP'
+      remoteRepositoryURL: 'https://github.com/abhilashhaa/OpenSAPDemo.git'
+      role: 'Provided'
+      vSID: 'FEF'
+      branch: 'master'
+      commit: 'commit'
+      scope: 'scope'
+      rollback: false
+      configuration:
+       dummyconfig: "dummyval"
 )  
   
   stage('RunUnitTest') 

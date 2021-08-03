@@ -23,8 +23,6 @@ node ()
       repository: 'OpenSAP'
   )
        
-       
-    )
   
     stage('RollbackCommit') 
     gctsRollback(

@@ -18,7 +18,6 @@ node ()
   scope: 'scope',
   rollback: false,
   configuration: [dummyConfig: 'dummyval']
-)
 )  
   
   stage('RunUnitTest') 

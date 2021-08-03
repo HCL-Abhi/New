@@ -1,7 +1,6 @@
 @Library('piper-library-os') 
 
-node() {
-  
+ 
   pipeline {
     agent any
   
@@ -26,4 +25,4 @@ node() {
     )
 }
 }
-}
+

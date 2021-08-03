@@ -1,5 +1,24 @@
-@library('piper-library-os')
+@Library('piper-library-os') _
 
-gctsDeploy script: this
+node() {
 
-abapCi abapPackagename: '', runAtcChecks: true, runUnitTests: true
+  stage('Start') {
+
+      //
+
+    
+       }
+ stage('Deploy Commit') {
+      gctsDeploy script: this
+  }
+  stage('Roll Unit Test') {
+       gctsExecuteABAPUnitTests script: this
+  }
+  stage('RollBack Commit') {
+    gctsRollback script: this
+  }
+      
+	
+  
+}
+

@@ -1,4 +1,4 @@
-library('piper-library-os')
+@library('piper-library-os')
 
 gctsDeploy script: this
 

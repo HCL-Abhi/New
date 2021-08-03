@@ -2,8 +2,6 @@
 
 node() {
   
- 
-  
   stage('DeployCommit') {
     gctsDeploy(
         script: this,
@@ -18,9 +16,10 @@ node() {
     gctsExecuteABAPUnitTests(
       script: this
     )
-    
+  }
     stage('RollbackCommit') {
     gctsRollback(
       script: this
     )
+}
 }

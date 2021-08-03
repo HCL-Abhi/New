@@ -1,6 +1,3 @@
-
-
-
 @Library('piper-library-os') _
 
 node() {

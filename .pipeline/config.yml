@@ -1,16 +1,7 @@
-steps:
-  <...>
+general:
+stages:
   gctsDeploy:
-    host: 'https://hclutl1909.hcldigilabs.com:8001'
+    host: 'https://abap.server.com:port'
     client: '000'
     abapCredentialsId: 'ABAPUserPasswordCredentialsId'
-    repository: 'myrepo'
-    remoteRepositoryURL: "https://github.com/abhilashhaa/HCL_Githup"
-    role: 'SOURCE'
-    vSID: 'FEF'
-    branch: 'master'
-    commit: 'commit'
-    scope: 'scope'
-    rollback: false
-    configuration:
-        dummyconfig: "dummyval"
+    repository: 'myrepo' 

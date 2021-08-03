@@ -2,9 +2,7 @@
 
 node() {
   
-  stage('start')
-  {
-  }
+ 
   
   stage('DeployCommit') {
     gctsDeploy(

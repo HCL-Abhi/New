@@ -1,26 +1,17 @@
-@library ('piper-library-os')
 
 
+
+@Library('piper-library-os') _
 
 node() {
-
-  stage('Start') {
-    
-       }
- stage('Deploy Commit') {
-	 
-      gctsDeploy script: this
-  }
-  stage('Roll Unit Test') {
-	  
-       gctsExecuteABAPUnitTests script: this
-  }
-  stage('RollBack Commit') {
-	  
-    gctsRollback script: this
-  }
-      
-	
   
-}
+  stage('Deploy') {
+    gctsDeploy(
+        script: this,
+        host: 'https://abap.server.com:port',
+        client: '200',
+        abapCredentialsId: 'ABAPUserPasswordCredentialsId',
+        repository: 'myrepo',
+      )
+  }
 

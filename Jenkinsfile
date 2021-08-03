@@ -14,7 +14,6 @@ node ()
   role: 'Provided',
   vSID: 'FEF',
   branch: 'master',
-  commit: 'commit',
   scope: 'scope',
   rollback: false,
   configuration: [dummyConfig: 'dummyval']

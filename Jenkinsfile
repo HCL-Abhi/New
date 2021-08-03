@@ -14,6 +14,7 @@ node ()
   role: 'Provided',
   vSID: 'FEF',
   branch: 'master',
+  commit: '$PIPER_commit'
   scope: 'scope',
   rollback: false,
   configuration: [dummyConfig: 'dummyval']

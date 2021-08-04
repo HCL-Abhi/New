@@ -6,7 +6,7 @@ node ()
   gctsCreateRepository(
   script: this,
   host: 'https://hclutl1909.hcldigilabs.com:8001',
-  client: '000',
+  client: '200',
   abapCredentialsId: 'ABAPUserPasswordCredentialsId',
   repository: 'myrepo',
   remoteRepositoryURL: 'https://github.com/abhilashhaa/OpenSAPDemo.git',
@@ -20,7 +20,7 @@ node ()
   gctsCloneRepository(
   script: this,
   host: 'https://hclutl1909.hcldigilabs.com:8001',
-  client: '000',
+  client: '200',
   abapCredentialsId: 'ABAPUserPasswordCredentialsId',
   repository: 'myrepo'
 )

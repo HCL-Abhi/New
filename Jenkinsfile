@@ -14,7 +14,7 @@ node ()
   client: '000',
   vSID: 'FEF',
   branch: 'master',
-  commit: '69832f7',
+  commit: '$PIPER_commit',
   rollback: false,
   configuration: [dummyConfig: 'dummyval']
 )  

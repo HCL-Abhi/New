@@ -15,7 +15,7 @@ node ()
   branch: 'master',
   commit: '$PIPER_commit',
   rollback: false,
-  configuration: [dummyConfig: 'dummyval']
+  
 )  
   
   stage('RunUnitTest') 

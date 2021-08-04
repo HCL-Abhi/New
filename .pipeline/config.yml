@@ -4,16 +4,22 @@ stages:
 <...>
   gctsDeploy:
     host: 'https://hclutl1909.hcldigilabs.com:8001'
-    client: '200'
-    abapCredentialsId: 'AbapSystem'
-    repository: 'OpenSAP' 
+    client: '000'
+    abapCredentialsId: 'ABAPUserPasswordCredentialsId'
+    repository: 'OpenSAP'
+    remoteRepositoryURL: "https://remote.repository.url.com"
+    role: 'Provided'
+    vSID: 'FEF'
+    branch: 'master'
+    rollback: false
+    
     
     steps:
   <...>
   gctsExecuteABAPUnitTests:
     host: 'https://hclutl1909.hcldigilabs.com:8001'
     client: '200'
-    abapCredentialsId: 'AbapSystem'
+    abapCredentialsId: 'ABAPUserPasswordCredentialsId'
     repository: 'OpenSAP' 
     
     steps:
@@ -21,5 +27,5 @@ stages:
   gctsRollback:
     host: 'https://hclutl1909.hcldigilabs.com:8001'
     client: '200'
-    abapCredentialsId: 'AbapSystem'
+    abapCredentialsId: 'ABAPUserPasswordCredentialsId'
     repository: 'OpenSAP' 

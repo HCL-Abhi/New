@@ -10,7 +10,7 @@ general:
     role: 'Provided'
     vSID: 'FEF'
     branch: 'master'
-    rollback: false
+    rollback: true
     )
     
    steps: (

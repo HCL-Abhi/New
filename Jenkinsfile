@@ -12,7 +12,7 @@ node ()
   remoteRepositoryURL: "https://github.com/abhilashhaa/OpenSAPDemo.git",
   role: 'Provided',
   vSID: 'FEF',
-  commit: '$PIPER_commit',
+  commit: 'c630005',
   rollback: false,
   
 )  

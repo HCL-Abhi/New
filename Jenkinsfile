@@ -12,8 +12,7 @@ node ()
   remoteRepositoryURL: "https://github.com/abhilashhaa/OpenSAPDemo.git",
   role: 'TARGET',
   vSID: 'FEF',
-  commit: 'c630005',
-  rollback: false,
+ 
   
 )  
   

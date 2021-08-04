@@ -2,6 +2,28 @@
 
 node () 
 {
+  stage('CreateRepository')
+  gctsCreateRepository(
+  script: this,
+  host: 'https://hclutl1909.hcldigilabs.com:8001',
+  client: '000',
+  abapCredentialsId: 'ABAPUserPasswordCredentialsId',
+  repository: 'myrepo',
+  remoteRepositoryURL: 'https://github.com/abhilashhaa/OpenSAPDemo.git',
+  role: 'TARGET',
+  vSID: 'FEF'
+  )
+  
+  
+  stage('CloneRepository')
+  
+  gctsCloneRepository(
+  script: this,
+  host: 'https://hclutl1909.hcldigilabs.com:8001',
+  client: '000',
+  abapCredentialsId: 'ABAPUserPasswordCredentialsId',
+  repository: 'myrepo'
+)
   
     stage('DeployCommit') 
     gctsDeploy(

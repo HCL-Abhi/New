@@ -20,9 +20,9 @@ node ()
   stage('RunUnitTest') 
     gctsExecuteABAPUnitTests(
       script: this,
-      host: 'hcluks4hana.hcldigilabs.com:8001',
+      host: 'https://hclutl1909.hcldigilabs.com:8001',
       client: '200',
-      abapCredentialsId: 'AbapSystem',
+      abapCredentialsId: 'ABAPUserPasswordCredentialsId',
       repository: 'OpenSAP'
   )
        
@@ -30,9 +30,9 @@ node ()
     stage('RollbackCommit') 
     gctsRollback(
       script: this,
-      host: "hcluks4hana.hcldigilabs.com:8001",
+      host: "https://hclutl1909.hcldigilabs.com:8001",
       client: "200",
-      abapCredentialsId: 'AbapSystem',
+      abapCredentialsId: 'ABAPUserPasswordCredentialsId',
       repository: "OpenSAP"
   )
 }

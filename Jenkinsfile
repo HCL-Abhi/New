@@ -8,7 +8,7 @@ node ()
   script: this,
   host: 'https://hclutl1909.hcldigilabs.com:8001',
   abapCredentialsId: 'ABAPUserPasswordCredentialsId',
-  repository: 'OpenSAPDemo',
+  repository: 'OpenSAP',
   remoteRepositoryURL: "https://github.com/abhilashhaa/OpenSAPDemo.git",
   role: 'Provided',
   vSID: 'FEF',

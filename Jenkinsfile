@@ -11,7 +11,7 @@ node ()
   repository: 'OpenSAP',
   remoteRepositoryURL: "https://github.com/abhilashhaa/OpenSAPDemo.git",
   role: 'Provided',
-  client: '000'
+  client: '000',
   vSID: 'FEF',
   branch: 'master',
   commit: '69832f7',

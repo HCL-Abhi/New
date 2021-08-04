@@ -12,7 +12,6 @@ node ()
   remoteRepositoryURL: "https://github.com/abhilashhaa/OpenSAPDemo.git",
   role: 'Provided',
   vSID: 'FEF',
-  branch: 'master',
   commit: '$PIPER_commit',
   rollback: false,
   

@@ -1,6 +1,27 @@
 general:
 
-  steps: (
+  
+  steps:
+  <...>
+  gctsExecuteABAPUnitTests:
+    host: 'https://hcluks4hana.hcldigilabs.com:8001'
+    client: '200'
+    abapCredentialsId: 'AbapSystem'
+    repository: 'OpenSAP'
+    
+    steps:
+  <...>
+  gctsRollback:
+    host: 'https://hcluks4hana.hcldigilabs.com:8001'
+    client: '200'
+    abapCredentialsId: 'AbapSystem'
+    repository: 'OpenSAP'
+   
+    
+
+
+  steps:
+  <...>
   gctsDeploy:
     host: 'https://hclutl1909.hcldigilabs.com:8001'
     client: '000'
@@ -10,23 +31,7 @@ general:
     role: 'Provided'
     vSID: 'FEF'
     branch: 'master'
-    rollback: true
-    )
+    rollback: 'true',
     
-   steps: (
-  gctsExecuteABAPUnitTests:
-    host: 'https://hclutl1909.hcldigilabs.com:8001'
-    client: '200'
-    abapCredentialsId: 'ABAPUserPasswordCredentialsId'
-    repository: 'OpenSAP' 
-    )
     
-    steps:
-  (
-  gctsRollback:
-    host: 'https://hcluks4hana.hcldigilabs.com:8001'
-    client: '200'
-    abapCredentialsId: 'AbapSystem'
-    repository: 'OpenSAP'
    
-    )

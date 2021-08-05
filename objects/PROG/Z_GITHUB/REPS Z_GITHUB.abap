@@ -4,4 +4,4 @@
 *&
 *&---------------------------------------------------------------------*
 REPORT Z_GITHUB.
-write 'Hello World'
+write 'Jenkins Unit test pass'.

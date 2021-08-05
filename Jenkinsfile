@@ -8,7 +8,7 @@ node ()
   host: 'https://hclutl1909.hcldigilabs.com:8001',
   client: '200',
   abapCredentialsId: 'ABAPUserPasswordCredentialsId',
-  repository: 'myrepo',
+  repository: 'myU09',
   remoteRepositoryURL: 'https://github.com/abhilashhaa/OpenSAPDemo.git',
   role: 'TARGET',
   vSID: 'FEF'
@@ -30,7 +30,7 @@ node ()
   script: this,
   host: 'https://hclutl1909.hcldigilabs.com:8001',
   abapCredentialsId: 'ABAPUserPasswordCredentialsId',
-  repository: 'OpenSAP',
+  repository: 'myU09',
   remoteRepositoryURL: "https://github.com/abhilashhaa/OpenSAPDemo.git",
   role: 'TARGET',
   vSID: 'FEF',

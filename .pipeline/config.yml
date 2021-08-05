@@ -2,7 +2,7 @@ general:
 
   
    
-  stage('RunUnitTest') 
+  steps:
     gctsExecuteABAPUnitTests(
       script: this,
       host: 'https://hcluks4hana.hcldigilabs.com:8001',
@@ -11,7 +11,7 @@ general:
       repository: 'OpenSAP'
 )
 
-stage('RollbackCommit') 
+steps:
     gctsRollback(
       script: this,
       host: "https://hcluks4hana.hcldigilabs.com:8001/",
@@ -21,8 +21,7 @@ stage('RollbackCommit')
   )
   
  
-  
-   stage('CreateRepository')
+  steps:
   gctsCreateRepository(
   script: this,
   host: 'https://hclutl1909.hcldigilabs.com:8001',
@@ -34,9 +33,7 @@ stage('RollbackCommit')
   vSID: 'FEF'
   )
   
-  
-  stage('CloneRepository')
-  
+  steps:
   gctsCloneRepository(
   script: this,
   host: 'https://hclutl1909.hcldigilabs.com:8001',
@@ -45,8 +42,7 @@ stage('RollbackCommit')
   repository: 'PASS'
 )
   
-  
-    stage('DeployCommit') 
+  steps: 
     gctsDeploy(
   script: this,
   host: 'https://hclutl1909.hcldigilabs.com:8001',

@@ -10,6 +10,7 @@ node ()
       client: '200',
       abapCredentialsId: 'AbapSystem',
       repository: 'OpenSAP'
+     rollback: 'false',
 )
 
 stage('RollbackCommit') 
@@ -56,7 +57,7 @@ stage('RollbackCommit')
   remoteRepositoryURL: "https://github.com/abhilashhaa/OpenSAPDemo.git",
   role: 'TARGET',
   vSID: 'FEF',
-  rollback: false,
+  rollback: 'false',
  
   
 )  

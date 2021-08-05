@@ -20,7 +20,7 @@ stage('RollbackCommit')
       client: "200",
       abapCredentialsId: 'AbapSystem',
       repository: "OpenSAP"
-     rollback: 'false',
+ 
   )
   
  

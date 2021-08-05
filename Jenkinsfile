@@ -11,7 +11,7 @@ node ()
   repository: 'myU09',
   remoteRepositoryURL: 'https://github.com/abhilashhaa/OpenSAPDemo.git',
   role: 'TARGET',
-  vSID: 'FEF'
+  vSID: 'GEF'
   )
   
   

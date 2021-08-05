@@ -1,30 +1,32 @@
 general:
-  gitSshKeyCredentialsId: GitHub_Test_SSH
+ 
 
 
 stage('RunUnitTest') 
-    gctsExecuteABAPUnitTests(
-      script: this,
+steps:
+    gctsExecuteABAPUnitTests:
+      
       host: 'https://hcluks4hana.hcldigilabs.com:8001',
       client: '200',
       abapCredentialsId: 'AbapSystem',
       repository: 'OpenSAP'
-)
+
 
 stage('RollbackCommit') 
-    gctsRollback(
-      script: this,
+steps:
+    gctsRollback:
+  
       host: "https://hcluks4hana.hcldigilabs.com:8001/",
       client: "200",
       abapCredentialsId: 'AbapSystem',
       repository: "OpenSAP"
-  )
+  
   
  
   
    stage('CreateRepository')
-  gctsCreateRepository(
-  script: this,
+   steps:
+  gctsCreateRepository:
   host: 'https://hclutl1909.hcldigilabs.com:8001',
   client: '200',
   abapCredentialsId: 'ABAPUserPasswordCredentialsId',
@@ -32,23 +34,22 @@ stage('RollbackCommit')
   remoteRepositoryURL: 'https://github.com/abhilashhaa/OpenSAPDemo.git',
   role: 'TARGET',
   vSID: 'FEF'
-  )
+  
   
   
   stage('CloneRepository')
-  
-  gctsCloneRepository(
-  script: this,
+  steps:
+  gctsCloneRepository:
   host: 'https://hclutl1909.hcldigilabs.com:8001',
   client: '200',
   abapCredentialsId: 'ABAPUserPasswordCredentialsId',
   repository: 'PASS'
-)
+
   
   
     stage('DeployCommit') 
-    gctsDeploy(
-  script: this,
+    steps:
+    gctsDeploy:
   host: 'https://hclutl1909.hcldigilabs.com:8001',
   abapCredentialsId: 'ABAPUserPasswordCredentialsId',
   repository: 'PASS',

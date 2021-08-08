@@ -4,4 +4,4 @@
 *&
 *&---------------------------------------------------------------------*
 REPORT Z_GCTSUNIT.
-write ' Unit test pass'.
+write 'Unit test pass'.

@@ -16,10 +16,11 @@ node ()
       client: '200',
       abapCredentialsId: 'AbapSystem',
       repository: 'HCL-DevOps-V1'
-     
 )
 
- stage("Rollback")
+
+    
+    stage("Rollback")
     {
 	 if (currentBuild.result == 'FAILURE') {
     gctsRollback(
@@ -30,8 +31,8 @@ node ()
         repository: "HCL-DevOps-V1"
    )
 		 println "Hello Jenkins"
-	 }
-    }
+}
+	}
   
  
   

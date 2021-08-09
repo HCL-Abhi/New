@@ -6,10 +6,7 @@ node ()
       checkout scm
 
       setupCommonPipelineEnvironment 
-	( script:this,
-	 )
- 
- 
+	 script:this,
   
   stage('RunUnitTest') 
     gctsExecuteABAPUnitTests(

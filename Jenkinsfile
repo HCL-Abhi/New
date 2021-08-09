@@ -11,7 +11,7 @@ node ()
       client: '200',
       abapCredentialsId: 'AbapSystem',
       repository: 'OpenSAP'
-	    verbose:'true'
+	   
 )
 
 

@@ -1,7 +1,5 @@
-general: 
 
 steps:
-  <...>
   gctsExecuteABAPUnitTests:
    host: 'https://hcluks4hana.hcldigilabs.com:8001',
 client: '200',	
@@ -11,7 +9,6 @@ repository: 'OpenSAP'
 
 
 steps:
-  <...>
   gctsRollback:
     host: "https://hcluks4hana.hcldigilabs.com:8001/",
     client: "200",
@@ -19,7 +16,6 @@ steps:
     repository: "OpenSAP"
     
     steps:
-  <...>
   gctsCreateRepository:
     host: 'https://hclutl1909.hcldigilabs.com:8001',
     client: '200',
@@ -30,7 +26,6 @@ steps:
     vSID: 'FEF'
     
     steps:
-  <...>
   gctsCloneRepository:
     host: 'https://hclutl1909.hcldigilabs.com:8001',
     client: '200',
@@ -38,7 +33,6 @@ steps:
     repository: 'HCL-DevOps-V1'
     
     steps:
-  <...>
   gctsDeploy:
     host: 'https://hclutl1909.hcldigilabs.com:8001',
   abapCredentialsId: 'ABAPUserPasswordCredentialsId',

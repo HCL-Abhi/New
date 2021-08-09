@@ -15,7 +15,7 @@ node ()
       host: 'https://hcluks4hana.hcldigilabs.com:8001',
       client: '200',
       abapCredentialsId: 'AbapSystem',
-      repository: 'OpenSAP'
+      repository: 'HCL-DevOps-V1'
      
 )
 
@@ -25,7 +25,7 @@ stage('RollbackCommit')
       host: "https://hcluks4hana.hcldigilabs.com:8001/",
       client: "200",
       abapCredentialsId: 'AbapSystem',
-      repository: "OpenSAP"
+      repository: "HCL-DevOps-V1"
  
   )
   
@@ -37,7 +37,7 @@ stage('RollbackCommit')
   host: 'https://hclutl1909.hcldigilabs.com:8001',
   client: '200',
   abapCredentialsId: 'ABAPUserPasswordCredentialsId',
-  repository: 'PASS',
+  repository: 'HCL-DevOps-V1',
   remoteRepositoryURL: 'https://github.com/abhilashhaa/OpenSAPDemo.git',
   role: 'TARGET',
   vSID: 'FEF'
@@ -51,7 +51,7 @@ stage('RollbackCommit')
   host: 'https://hclutl1909.hcldigilabs.com:8001',
   client: '200',
   abapCredentialsId: 'ABAPUserPasswordCredentialsId',
-  repository: 'PASS'
+  repository: 'HCL-DevOps-V1'
 )
   
   
@@ -60,7 +60,7 @@ stage('RollbackCommit')
   script: this,
   host: 'https://hclutl1909.hcldigilabs.com:8001',
   abapCredentialsId: 'ABAPUserPasswordCredentialsId',
-  repository: 'PASS',
+  repository: 'HCL-DevOps-V1',
   remoteRepositoryURL: "https://github.com/abhilashhaa/OpenSAPDemo.git",
   role: 'TARGET',
   vSID: 'FEF',

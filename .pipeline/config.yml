@@ -21,7 +21,7 @@ steps:
     client: '200',
     abapCredentialsId: 'ABAPUserPasswordCredentialsId',
     repository: 'HCL-DevOps-V2',
-    remoteRepositoryURL: 'https://github.com/abhilashhaa/OpenSAPDemo.git',
+    remoteRepositoryURL: 'https://github.com/abhilashhaa/HCL-DevOps-V1.git',
     role: 'TARGET',
     vSID: 'FEF'
     
@@ -37,7 +37,7 @@ steps:
     host: 'https://hclutl1909.hcldigilabs.com:8001',
   abapCredentialsId: 'ABAPUserPasswordCredentialsId',
   repository: 'HCL-DevOps-V2',
-  remoteRepositoryURL: "https://github.com/abhilashhaa/OpenSAPDemo.git",
+  remoteRepositoryURL: 'https://github.com/abhilashhaa/HCL-DevOps-V1.git',
   role: 'TARGET',
   vSID: 'FEF',
   rollback: 'false',

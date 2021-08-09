@@ -2,10 +2,7 @@
 
 node () 
 {
-	stage('prepare') 
-
-      
- 
+	
   
   stage('RunUnitTest') 
     gctsExecuteABAPUnitTests(

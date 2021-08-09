@@ -5,7 +5,7 @@ node ()
 
       checkout scm
 
-      
+      setupCommonPipelineEnvironment script:this,
  
  
   

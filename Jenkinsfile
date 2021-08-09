@@ -1,17 +1,18 @@
-@Library('piper-library-os')_ 
+@Library('piper-library-os') _
 
-node () 
+
+
+node()
 {
-	
-  
-  stage('RunUnitTest') 
+stage('Prepare')
+	      
+stage('RunUnitTest') 
     gctsExecuteABAPUnitTests(
       script: this,
       host: 'https://hcluks4hana.hcldigilabs.com:8001',
       client: '200',
       abapCredentialsId: 'AbapSystem',
-      repository: 'OpenSAP'
-	   
+      repository: 'HCL-DevOps-V1'
 )
 
 
@@ -24,15 +25,13 @@ node ()
         host: "https://hcluks4hana.hcldigilabs.com:8001/",
         client: "200",
         abapCredentialsId: 'AbapSystem',
-        repository: "OpenSAP"
+        repository: "HCL-DevOps-V1"
    )
 		 println "Hello Jenkins"
 }
 	}
-  
- 
-  
-   stage('CreateRepository')
+	
+	stage('CreateRepository')
   gctsCreateRepository(
   script: this,
   host: 'https://hclutl1909.hcldigilabs.com:8001',
@@ -54,9 +53,8 @@ node ()
   abapCredentialsId: 'ABAPUserPasswordCredentialsId',
   repository: 'HCL-DevOps-V1'
 )
-  
-  
-    stage('DeployCommit') 
+            
+     stage('DeployCommit') 
     gctsDeploy(
   script: this,
   host: 'https://hclutl1909.hcldigilabs.com:8001',
@@ -65,14 +63,8 @@ node ()
   remoteRepositoryURL: "https://github.com/abhilashhaa/OpenSAPDemo.git",
   role: 'TARGET',
   vSID: 'FEF',
-  rollback: 'false',
- 
-  
-)  
-  
-      
-      
-      
-  
-  
+  rollback: 'false'
+	    )
+   
+
 }

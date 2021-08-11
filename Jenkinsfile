@@ -34,7 +34,7 @@ stage('RunUnitTest')
     
     stage("Rollback")
 	{
-	 if (gctsExecuteABAPUnitTests.result == 'SUCCESS') {
+	 if (RunUnitTest.result == 'SUCCESS') {
     gctsRollback(
         script: this,
         host: "https://hclutl1909.hcldigilabs.com:8001",

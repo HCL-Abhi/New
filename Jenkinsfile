@@ -22,7 +22,7 @@ stage('Build')
 	    )
 	      
 stage('RunUnitTest') 
-    gctsExecuteABAPUnitTests(
+   def ret = gctsExecuteABAPUnitTests(
       script: this,
       host: 'https://hclutl1909.hcldigilabs.com:8001',
       client: '200',
@@ -52,3 +52,5 @@ stage('RunUnitTest')
    
 
 }
+
+echo ret+ "return value"

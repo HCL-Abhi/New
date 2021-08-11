@@ -6,6 +6,8 @@ node()
 {
 stage('Prepare')
 	
+stage('Build')
+	
 	
 	 stage('DeployCommit') 
     gctsDeploy(

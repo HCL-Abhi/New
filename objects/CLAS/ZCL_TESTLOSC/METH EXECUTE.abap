@@ -1,4 +1,4 @@
  method execute.
- data-key = 'Welcome to'.
- data-value = 'the sap open course'.
+ data-key = 'welcome to'.
+ data-value = 'the world'.
  endmethod.

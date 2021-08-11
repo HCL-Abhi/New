@@ -34,9 +34,8 @@ stage('RunUnitTest')
     
     stage("Rollback")
 	{
-	 if (RunUnitTest.result == 'FAILURE') {
-		 
-        gctsRollback(
+	 if (currentBuild.result == 'FAILURE') {
+    gctsRollback(
         script: this,
         host: "https://hclutl1909.hcldigilabs.com:8001",
         client: "200",

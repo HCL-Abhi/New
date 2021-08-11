@@ -42,8 +42,9 @@ stage('RunUnitTest')
         abapCredentialsId: 'ABAPUserPasswordCredentialsId',
         repository: "HCL-DevOps-V"
    )
-		  println "Hello Jenkins"
+		  
 }
+		echo "Hello Jenkins"
 	}
 		
 	

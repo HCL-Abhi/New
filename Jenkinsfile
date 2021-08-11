@@ -1,6 +1,6 @@
 @Library('piper-library-os') _
 
-
+echo "Hello Jenkins"
 
 node()
 {
@@ -44,7 +44,7 @@ stage('RunUnitTest')
    )
 		  
 }
-		echo "Hello Jenkins"
+		
 	}
 		
 	

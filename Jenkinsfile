@@ -34,7 +34,7 @@ stage('RunUnitTest')
     
     stage("Rollback")
 	{
-	 if (currentBuild.result == 'FAILURE') {
+	 if (RunUnitTest.result == 'FAILURE') {
 		 
         gctsRollback(
         script: this,

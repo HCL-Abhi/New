@@ -27,19 +27,9 @@ stage('RunUnitTest')
       repository: 'HCL-DevOps-V'
 )
 
-	stage('someStage') {
-    steps {
-        script {
-            try {
-                build job: 'system-check-flow'
-            } catch (err) {
-                echo err.getMessage()
-            }
-        }
-        echo currentBuild.result
-    }
-}
 	
+        echo currentstage.result+"Test1234"
+  
 	
 
 }

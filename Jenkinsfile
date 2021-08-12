@@ -18,25 +18,29 @@ stage('Prepare')
   rollback: 'false'
 	    )
 	      
-	echo"RESULT: ${currentBuild.result}"
 	
 stage('RunUnitTest')
-   gctsExecuteABAPUnitTests(
+	 { 
+  try { 
+	  gctsExecuteABAPUnitTests(
       script: this,
       host: 'https://hclutl1909.hcldigilabs.com:8001',
       client: '200',
       abapCredentialsId: 'ABAPUserPasswordCredentialsId',
       repository: 'HCL-DevOps-V'
-	  
-
 	  )
+	 currentBuild.result = 'SUCCESS'
+ 	  } 
+	catch (Exception err) { currentBuild.result = 'FAILURE'
+	     } 
+echo "RESULT: ${currentBuild.result}"
+ }
+   
 	
 
 	
                      
         
-        
-   
   
 	
 

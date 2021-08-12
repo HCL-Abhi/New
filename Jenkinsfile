@@ -29,10 +29,9 @@ stage('RunUnitTest')
 
 	
        stage('someStage') {
-    steps {
-        catchError {
+            catchError {
             build job: 'system-check-flow'
-        }
+        
         echo currentBuild.result
     }
 }

@@ -42,7 +42,7 @@ echo "RESULT: ${currentBuild.result}"
 	   expression { currentBuild.result == 'FAILURE' }
 	
 	      )
-	steps{
+	steps:
 	    script {
 	       gctsRollback(
         script: this,
@@ -52,7 +52,7 @@ echo "RESULT: ${currentBuild.result}"
         repository: "HCL-DevOps-V"
    )
 	    }
-	       }
+	       
 	}
 	
 

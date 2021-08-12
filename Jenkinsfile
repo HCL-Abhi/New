@@ -28,13 +28,18 @@ stage('RunUnitTest')
 )
 
 	
-       stage('someStage') {
-            catchError {
+     stage('Test') {
             
+            steps {
+                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+                    script {
+                        	}
+                        }
+                    }
+                }
         
         echo currentBuild.result+"Testing1234"
-    }
-}
+   
   
 	
 

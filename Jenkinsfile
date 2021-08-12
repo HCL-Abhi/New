@@ -38,7 +38,7 @@ echo "RESULT: ${currentBuild.result}"
 		 }
 	
    stage("Rollback"){
-	if {
+	if (
 	   expression { currentBuild.result == 'FAILURE' }
 	
 	      }
@@ -51,7 +51,7 @@ echo "RESULT: ${currentBuild.result}"
         abapCredentialsId: 'ABAPUserPasswordCredentialsId',
         repository: "HCL-DevOps-V"
    )
-	            }
+	            )
 	       }
 	}
 	

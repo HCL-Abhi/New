@@ -2,9 +2,7 @@
 
 node()
 {
-stage('Prepare')
-	
-	
+stage('Prepare')	
 	
 
 	
@@ -30,19 +28,11 @@ stage('RunUnitTest')
 )
 
     
-    stage("Rollback")
-    gctsRollback(
-        script: this,
-        host: "https://hclutl1909.hcldigilabs.com:8001",
-        client: "200",
-        abapCredentialsId: 'ABAPUserPasswordCredentialsId',
-        repository: "HCL-DevOps-V"
-   )
-		  
+   
+	echo currentBuild.result+"Testing123"	  
 
 	
-	stage('CleanUp') 
-   
+	
 
 }
 

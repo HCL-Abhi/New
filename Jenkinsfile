@@ -1,28 +1,12 @@
 @Library('piper-library-os') _
 
-
-
-
-   
-    
-
-
 node()
 {
 stage('Prepare')
 	
+	
+	
 stage('Build')
-	
-	 stage('CheckLog') {
-     
-        if (manager.logContains('.*myTestString.*')) 
-      {
-		echo "Hello Jenkins"
-      }
-        } 
-      
-	 
-	
 	
 	 stage('DeployCommit') 
     gctsDeploy(

@@ -18,7 +18,8 @@ stage('Prepare')
   rollback: 'false'
 	    )
 	      
-stage('RunUnitTest') 
+stage('RunUnitTest')
+	catchError { 
    gctsExecuteABAPUnitTests(
       script: this,
       host: 'https://hclutl1909.hcldigilabs.com:8001',
@@ -27,9 +28,9 @@ stage('RunUnitTest')
       repository: 'HCL-DevOps-V'
 )
 
-    
+	}
    
-	echo gctsExecuteABAPUnitTests.result+"Testing123"	  
+	echo currentBuild.result+"Testing123"	  
 
 	
 	

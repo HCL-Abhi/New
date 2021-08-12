@@ -14,11 +14,11 @@ stage('Prepare')
 stage('Build')
 	
 	 stage('CheckLog') {
-      steps {
+      script: this,
         if (manager.logContains('.*myTestString.*'))    
 		echo "Hello Jenkins"
         }
-      }
+      
 	 
 	
 	

@@ -32,8 +32,6 @@ stage('RunUnitTest')
 echo ret+ "return value"
     
     stage("Rollback")
-	{
-	 if (RunUnitTest.result == 'SUCCESS') {
     gctsRollback(
         script: this,
         host: "https://hclutl1909.hcldigilabs.com:8001",
@@ -42,10 +40,7 @@ echo ret+ "return value"
         repository: "HCL-DevOps-V"
    )
 		  
-}
-		
-	}
-		
+
 	
 	stage('CleanUp') 
    

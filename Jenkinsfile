@@ -28,7 +28,7 @@ stage('RunUnitTest')
 )
 
 	
-        echo currentstage.result+"Test1234"
+        echo stage.result+"Test1234"
   
 	
 

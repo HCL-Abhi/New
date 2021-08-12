@@ -6,9 +6,9 @@ stage('Prepare')
 	
 	
 	
-stage('Build')
+
 	
-	 stage('DeployCommit') 
+  stage('DeployCommit') 
     gctsDeploy(
   script: this,
   host: 'https://hclutl1909.hcldigilabs.com:8001',
@@ -21,7 +21,7 @@ stage('Build')
 	    )
 	      
 stage('RunUnitTest') 
-   def ret = gctsExecuteABAPUnitTests(
+   gctsExecuteABAPUnitTests(
       script: this,
       host: 'https://hclutl1909.hcldigilabs.com:8001',
       client: '200',
@@ -29,7 +29,6 @@ stage('RunUnitTest')
       repository: 'HCL-DevOps-V'
 )
 
-echo ret+ "return value"
     
     stage("Rollback")
     gctsRollback(

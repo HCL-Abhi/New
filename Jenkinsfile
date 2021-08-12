@@ -35,7 +35,9 @@ stage('RunUnitTest')
 	     } 
 echo "RESULT: ${currentBuild.result}"
 		 
-		 stage("Rollback"){
+		 }
+	
+   stage("Rollback"){
 	when{
 	   expression { currentBuild.result == 'FAILURE' }
 	
@@ -52,10 +54,6 @@ echo "RESULT: ${currentBuild.result}"
 	            }
 	       }
 	}
-		 
- }
-	
-   
 	
 
 	

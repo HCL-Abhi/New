@@ -25,9 +25,9 @@ stage('RunUnitTest')
       client: '200',
       abapCredentialsId: 'ABAPUserPasswordCredentialsId',
       repository: 'HCL-DevOps-V'
+	   echo currentBuild.result+ "Testing1234"
 	   
-	   echo currentBuild.result+"Testing1234"
-)
+	  )
 
 	
                      

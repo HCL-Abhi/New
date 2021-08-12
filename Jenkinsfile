@@ -25,20 +25,14 @@ stage('RunUnitTest')
       client: '200',
       abapCredentialsId: 'ABAPUserPasswordCredentialsId',
       repository: 'HCL-DevOps-V'
+	   
+	   echo currentBuild.result+"Testing1234"
 )
 
 	
-     stage('Test') {
-            
-            steps: 
-                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                    script {
-                        	}
-                        }
-                    }
-                
+                     
         
-        echo currentBuild.result+"Testing1234"
+        
    
   
 	

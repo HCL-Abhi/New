@@ -15,8 +15,7 @@ stage('Build')
 	
 	 stage('CheckLog') {
       steps {
-        if (manager.logContains('.*myTestString.*')) {
-          error("Build failed because of this and that..")   
+        if (manager.logContains('.*myTestString.*'))    
 		echo "Hello Jenkins"
         }
       }

@@ -40,8 +40,7 @@ echo "RESULT: ${currentBuild.result}"
    stage("Rollback"){
 	if (
 	   expression { currentBuild.result == 'FAILURE' }
-	
-	      )
+
 	steps:
 	    script {
 	       gctsRollback(
@@ -51,6 +50,7 @@ echo "RESULT: ${currentBuild.result}"
         abapCredentialsId: 'ABAPUserPasswordCredentialsId',
         repository: "HCL-DevOps-V"
    )
+		    )
 	    }
 	       
 	}

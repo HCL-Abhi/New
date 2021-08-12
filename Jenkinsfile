@@ -30,7 +30,7 @@ stage('RunUnitTest')
 	
        stage('someStage') {
             catchError {
-            build job: 'system-check-flow'
+            
         
         echo currentBuild.result+"Testing1234"
     }

@@ -19,7 +19,7 @@ stage('Build')
 		echo "Hello Jenkins"
         }
       }
-	 }
+	 
 	
 	
 	 stage('DeployCommit') 

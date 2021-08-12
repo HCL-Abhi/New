@@ -38,7 +38,7 @@ echo "RESULT: ${currentBuild.result}"
 		 }
 	
    stage("Rollback"){
-	when{
+	if {
 	   expression { currentBuild.result == 'FAILURE' }
 	
 	      }

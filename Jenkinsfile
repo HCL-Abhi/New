@@ -29,7 +29,7 @@ stage('RunUnitTest')
 
     
    
-	echo currentBuild.result+"Testing123"	  
+	echo gctsExecuteABAPUnitTests.result+"Testing123"	  
 
 	
 	

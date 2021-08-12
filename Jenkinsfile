@@ -2,15 +2,9 @@
 
 
 
-node {
-    stage('CheckLog') {
-      steps {
-        if (manager.logContains('.*myTestString.*')) {
-          error("Build failed because of this and that..")   
-		echo "Hello Jenkins"
-        }
-      }
-    }
+
+   
+    
 
 
 node()
@@ -18,6 +12,15 @@ node()
 stage('Prepare')
 	
 stage('Build')
+	
+	 stage('CheckLog') {
+      steps {
+        if (manager.logContains('.*myTestString.*')) {
+          error("Build failed because of this and that..")   
+		echo "Hello Jenkins"
+        }
+      }
+	 }
 	
 	
 	 stage('DeployCommit') 

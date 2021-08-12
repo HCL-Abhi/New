@@ -18,6 +18,8 @@ stage('Prepare')
   rollback: 'false'
 	    )
 	      
+	echo"RESULT: ${currentBuild.result}"
+	
 stage('RunUnitTest')
    gctsExecuteABAPUnitTests(
       script: this,
@@ -25,8 +27,7 @@ stage('RunUnitTest')
       client: '200',
       abapCredentialsId: 'ABAPUserPasswordCredentialsId',
       repository: 'HCL-DevOps-V'
-	   
-	echo"RESULT: ${currentBuild.result}"
+	  
 
 	  )
 	

@@ -1,6 +1,17 @@
 @Library('piper-library-os') _
 
-echo "Hello Jenkins"
+
+
+node {
+    stage('CheckLog') {
+      steps {
+        if (manager.logContains('.*myTestString.*')) {
+          error("Build failed because of this and that..")   
+		echo "Hello Jenkins"
+        }
+      }
+    }
+
 
 node()
 {

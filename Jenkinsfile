@@ -19,7 +19,6 @@ stage('Prepare')
 	    )
 	      
 stage('RunUnitTest')
-	catchError { 
    gctsExecuteABAPUnitTests(
       script: this,
       host: 'https://hclutl1909.hcldigilabs.com:8001',
@@ -28,10 +27,18 @@ stage('RunUnitTest')
       repository: 'HCL-DevOps-V'
 )
 
-	}
-   
-	echo currentBuild.result+"Testing123"	  
-
+	stage('someStage') {
+    steps {
+        script {
+            try {
+                build job: 'system-check-flow'
+            } catch (err) {
+                echo err.getMessage()
+            }
+        }
+        echo currentBuild.result
+    }
+}
 	
 	
 

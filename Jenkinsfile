@@ -34,7 +34,27 @@ stage('RunUnitTest')
 	catch (Exception err) { currentBuild.result = 'FAILURE'
 	     } 
 echo "RESULT: ${currentBuild.result}"
+		 
+		 stage("Rollback"){
+	when{
+	   expression { currentBuild.result == 'FAILURE' }
+	
+	      }
+	steps{
+	    script {
+	       gctsRollback(
+        script: this,
+        host: "https://hclutl1909.hcldigilabs.com:8001",
+        client: "200",
+        abapCredentialsId: 'ABAPUserPasswordCredentialsId',
+        repository: "HCL-DevOps-V"
+   )
+	            }
+	       }
+	}
+		 
  }
+	
    
 	
 

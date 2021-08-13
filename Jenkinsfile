@@ -3,7 +3,7 @@
 node()
 {
 stage('Prepare')	
-	
+	checkout scm
 
 	
   stage('DeployCommit') 

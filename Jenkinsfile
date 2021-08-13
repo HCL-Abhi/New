@@ -5,8 +5,6 @@ node()
 {
 stage('Prepare')	
 	checkout scm
-stage('build')
-	checkout scm
     
 	
   stage('DeployCommit') 

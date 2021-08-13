@@ -7,7 +7,7 @@ stage('Prepare')
 	checkout scm
 stage('build')
 	checkout scm
-    sh 'mvn clean install'
+    
 	
   stage('DeployCommit') 
     gctsDeploy(

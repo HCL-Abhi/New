@@ -17,7 +17,7 @@ class ltcl_master implementation.
  method check.
   data(structure) = zcl_testlosc=>execute( ).
    cl_abap_unit_assert=>assert_equals( exp = 'welcome to' act = STRUCTURE-key ).
-   cl_abap_unit_assert=>assert_equals( exp = 'the world' act = STRUCTURE-value ).
+   cl_abap_unit_assert=>assert_equals( exp = 'the world00' act = STRUCTURE-value ).
 
 
  endmethod.

@@ -1,5 +1,7 @@
 @Library('piper-library-os') _
 
+abapEnvironmentPipeline script: this
+
 node()
 {
 stage('Prepare')	

@@ -5,7 +5,9 @@ node()
 {
 stage('Prepare')	
 	checkout scm
-setupCommonPipelineEnvironment script:this
+stage('build')
+	checkout scm
+    sh 'mvn clean install'
 	
   stage('DeployCommit') 
     gctsDeploy(

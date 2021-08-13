@@ -1,12 +1,11 @@
 @Library('piper-library-os') _
 
-abapEnvironmentPipeline script: this
 
 node()
 {
 stage('Prepare')	
 	checkout scm
-
+setupCommonPipelineEnvironment script:this
 	
   stage('DeployCommit') 
     gctsDeploy(

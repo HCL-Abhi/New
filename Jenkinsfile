@@ -60,8 +60,10 @@ echo "RESULT: ${currentBuild.result}"
 	}
 	
 stage('CleanUp')
-	post {
-    failure {
+	{
+	if (currentBuild.result == 'FAILURE')
+		{
+     steps:
         mail to: 'abhilasha-singh@hcl.com',
              subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
              body: "Something is wrong with ${env.BUILD_URL}"

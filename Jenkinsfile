@@ -4,8 +4,7 @@
 node()
 {
 stage('Prepare')	
-	checkout scm
-    
+	
 	
   stage('DeployCommit') 
     gctsDeploy(
@@ -51,9 +50,7 @@ echo "RESULT: ${currentBuild.result}"
         abapCredentialsId: 'ABAPUserPasswordCredentialsId',
         repository: "HCL-DevOps-V"
    )
-		    mail to: 'abhilasha-singh@hcl.com',
-             subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-             body: "Something is wrong with ${env.BUILD_URL}"
+		    
 		    
 	    }
 		}
